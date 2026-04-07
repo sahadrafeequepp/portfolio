@@ -128,3 +128,34 @@
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(360deg); }
 }
+
+/* Mobile Styles (Phones) */
+@media (max-width: 600px) {
+    .carousel-container {
+        perspective: 800px; /* Pulls the "camera" back slightly */
+        height: 200px;
+    }
+
+    .carousel {
+        width: 100px;  /* Shrink the card size for mobile */
+        height: 100px;
+    }
+
+    .card {
+        /* THE BIG FIX: Reduce translateZ so the circle fits on the screen */
+        transform: rotateY(calc(var(--i) * 51.42deg)) translateZ(140px) !important;
+    }
+    
+    .card img {
+        width: 30px; /* Smaller icons for smaller cards */
+    }
+    
+    .card h3 {
+        font-size: 10px; /* Smaller text */
+    }
+}
+@media (max-width: 600px) {
+    .carousel {
+        animation: rotateCarousel 30s linear infinite; /* Slower for easier tapping */
+    }
+}
