@@ -12,9 +12,7 @@ body {
   margin: 0;
 }
 
-.button {
-  background-color: var(--accent-color);
-}   
+   
 /* Apply to the main title */
 .title {
     font-family: 'Rubik Storm', system-ui;
@@ -234,79 +232,6 @@ body {
     box-shadow: 0 -10px 20px rgba(0,0,0,0.1); /* Shadow on the top edge */
 }
 
-.book-container {
-    position: relative;
-    z-index: 2000;
-    /* Reduced from 120vh to around 80vh since the book is shorter */
-    margin-top: 100vh; 
-    display: flex;
-    justify-content: center;
-    padding-bottom: 150px;
-}
-.single-page-book {
-    position: relative;
-    width: 800px;  /* Matches your Figma Frame Width */
-    height: 652px; /* Matches your Figma Frame Height */
-    margin: 0 auto;
-    perspective: 2500px; /* Increased for a more dramatic flip */
-}
-.single-page-book .face {
-    /* This adds a subtle inner shadow to make the page look like real paper */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-/* Ensure both faces share the same size and shape */
-.face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* CRITICAL: Hides the other side */
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Rotate the back face so it's ready to be revealed */
-.face.back {
-    transform: rotateY(180deg);
-    background-color: #fff; /* Ensures no transparency issues */
-}
-
-
-
-.sheet {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-origin: left center;
-    /* Use a smoother timing function for a "premium" feel */
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
-}
-
-/* The Flip: Move it slightly left so it doesn't just spin in place */
-.sheet.flipped {
-    transform: rotateY(-160deg) translateX(-20px);
-}
-/* Apply to #s2, #s3, #s4 */
-.mid-page .face::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('paper.png');
-    background-size: cover;
-    opacity: 0.2; /* Subtle texture */
-    pointer-events: none; /* Allows you to still click the sheet */
-}
-#s5 .back, #s1 .back {
-    filter: brightness(0.9) contrast(1.1); /* Makes the back look slightly darker/shadowed */
-}
 
 .title span {
     display: inline-block;
@@ -334,25 +259,6 @@ body {
     color: #f8c8dc;
     transform: scale(1.2) translateY(-5px);
 }
-
-/* This targets the specific face holding your certificate */
-.cert-face {
-    /* 'contain' ensures the whole certificate is visible without stretching */
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    /* This creates 'padding' so the certificate doesn't touch the book edges */
-    background-origin: content-box; 
-    padding: -20px; 
-    
-    /* Ensures the certificate image doesn't bleed over the rounded corners */
-    overflow: hidden; 
-}
-
-/* ... existing code ... */
-
-/* --- ADDING GAP BETWEEN PROJECT CARDS --- */
 .card.software-card {
     margin-bottom: 50px; /* Adjust this value (e.g., 30px to 100px) for the desired gap */
 }
