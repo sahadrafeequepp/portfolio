@@ -4,187 +4,108 @@
     <link rel="stylesheet" href="portf.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
     <body>
         <!-- HERO SECTION -->
     <header class="hero">
-            <h1 class="title" align="center" id="hero-name">P O R T F O L I O</h1>
-    <div class="hero-layout">     
-        <div class="profile-photo">
-            <img src="IMG_20260320_171801-removebg-preview.png" alt="Profile Photo">
-            <div class="hover-bubble">HI</div>
-        </div>
-    
-        <div class="projects-gallery">
-        <div class="card project-mini"> 
-        <p><b>HELLO!!!</b><br> I am <b><i>SAHAD RAFEEQUE P P</i></b><br>a B.Tech student and aspiring Creative Technologist who believes that code is as much about "vibe" as it is about logic. I specialize in "Vibe Coding"—a movement focused on high-level architectural intent and AI-assisted execution to build digital experiences that feel more like art than software.</p>
-        </div>
-        
-        <div class="card project-mini"> 
-        <p>
-My journey is a mix of high-level web design and deep-level hardware hacking:
+            <p class="title" align="center" id="hero-name">WELCOME TO</p>
+            <p class="title1" align="center" id="zero-name">MY WORLD</p>
+        </header>
+        <hr class="divider">
+        <p class="paragraph">Find Me Here:</p>
 
-Game Development: Currently exploring the worlds of Unity 6, Pygame, and C++.
-
-Hardware & Servers: I have a passion for repurposing old Android hardware into functional servers using Termux
-
-AI & Computer Vision: Developer of projects like "Balloon Pop CV,"</p>
-        </div>
-        </div>
-        
+        <div class="carousel-container">
+  <div class="carousel">
+    <div class="card" style="--i:1;">
+      <a href="https://instagram.com/sahad_rafeeque" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+        <h3>Instagram</h3>
+      </a>
     </div>
-    </header>
-
-     <div class="scroll-container">
-    
-    <div class="card software-card reveal active">
-        <div class="mini-card purple">
-            
-            
-            <div class="project-content">
-                <div class="project-text">
-                   
-                </div>
-                <div class="project-image-container">
-                    </div>
-            </div>
-
-            <div class="project-content top-divider">
-                <div class="project-text">
-                  
-                </div>
-                <div class="project-image-container">
-                   </div>
-            </div>
-            
-        </div>
+    <div class="card" style="--i:2;">
+      <a href="https://www.linkedin.com/in/sahad-rafeeque-p-p/" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn">
+        <h3>LinkedIn</h3>
+      </a>
     </div>
-
-            <div class="card software-card reveal active">
-        <div class="mini-card purple">
-            
-            <div class="project-content">
-                <div class="project-text">
-                </div>
-                <div class="project-image-container">
-                </div>
-            </div>
-
-            <div class="project-content top-divider">
-                <div class="project-text">
-                </div>
-                <div class="project-image-container">
-                </div>
-            </div>
-            
-        </div>
+    <div class="card" style="--i:3;">
+      <a href="https://github.com/sahadrafeequepp" target="_blank">
+        <img src="git.png" alt="GitHub">
+        <h3>GitHub</h3>
+      </a>
     </div>
-
-           <div class="card software-card reveal active">
-        <div class="mini-card purple">
-            <div class="project-content">
-                <div class="project-text">
-                </div>
-                <div class="project-image-container">
-                </div>
-            </div>
-
-            <div class="project-content top-divider">
-                <div class="project-text">
-                </div>
-                <div class="project-image-container">
-                </div>
-            </div>
-            
-        </div>
+    <div class="card" style="--i:4;">
+      <a href="https://x.com/Sahad_Rafeeque" target="_blank">
+        <img src="x.png" alt="X">
+        <h3>X</h3>
+      </a>
     </div>
-
-        <div class="card software-card reveal">
-            <div class="mini-card blue">
-             </div>
-        </div>
+     <div class="card" style="--i:5;">
+      <a href="https://wa.me/919061135247" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp">
+        <h3>WhatsApp</h3>
+      </a>
     </div>
-    
-
-    
-    
-
+     <div class="card" style="--i:6;">
+      <a href="mailto:mohdsahadrafeeque@gmail.com" target="_blank">
+        <img src="gmail.png" alt="Gmail">
+        <h3>Gmail</h3>
+      </a>
+     </div>
+     <div class="card" style="--i:7;">
+      <a href="https://discord.com/channels/@sahad_rafeeque" target="_blank">
+        <img src="discord.png" alt="Discord">
+        <h3>Discord</h3>
+      </a>
+  </div>
+</div>
 
     <script>
-           const observerOptions = {
-            root: null, // Use the viewport as the container
-            threshold: 0.2 // Trigger when 20% of the card is visible
-        };
+   
+// Function to wrap letters in spans and set up the animation
+function setupDancingText(elementId) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                } else {
-                    // Optional: Remove this line if you want the card 
-                    // to stay visible once it has appeared.
-                    entry.target.classList.remove('active');
-                }
-            });
-        }, observerOptions);
+    const text = element.textContent;
+    element.textContent = '';
 
-        // Select all cards you want to reveal
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-        window.addEventListener('scroll', () => {
-            const cards = document.querySelectorAll('.reveal.card');
-            cards.forEach((card) => {
-                const rect = card.getBoundingClientRect();
-                // If the card is stuck at the top, we can slightly fade or scale it
-                if (rect.top <= 50) {
-                    card.style.transform = "scale(0.95)";
-                    card.style.opacity = "0.9";
-                } else {
-                    card.style.transform = "scale(1)";
-                    card.style.opacity = "1";
-                }
-            });
-        });
-
-
-    
-
-
-const nameElement = document.getElementById('hero-name');
-const nameText = nameElement.textContent;
-nameElement.textContent = '';
-
-// 1. Wrap each letter in a span
-nameText.split('').forEach((letter) => {
-    const span = document.createElement('span');
-    // If it's a space, use a non-breaking space entity
-    span.textContent = letter === ' ' ? '\u00A0' : letter;
-    nameElement.appendChild(span);
-});
-
-// 2. Make them dance on a loop
-const letters = nameElement.querySelectorAll('span');
-
-function startDancing() {
-    letters.forEach((span, index) => {
-        // Stagger the start of each letter's dance
-        setTimeout(() => {
-            span.classList.add('dancing');
-            
-            // Remove the class after animation ends so it can be re-triggered
-            setTimeout(() => {
-                span.classList.remove('dancing');
-            }, 600);
-            
-        }, index * 100); // 100ms delay between each letter
+    // Wrap each letter in a span
+    text.split('').forEach((letter) => {
+        const span = document.createElement('span');
+        span.textContent = letter === ' ' ? '\u00A0' : letter;
+        element.appendChild(span);
     });
+
+    const letters = element.querySelectorAll('span');
+
+    // Function to trigger the animation
+    return function startDancing() {
+        letters.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('dancing');
+                setTimeout(() => {
+                    span.classList.remove('dancing');
+                }, 600);
+            }, index * 100);
+        });
+    };
 }
 
-// Run the dance every 4 seconds
-setInterval(startDancing, 2000);
+// Initialize both headings
+const danceWelcome = setupDancingText('hero-name');
+const danceMyWorld = setupDancingText('zero-name');
 
-// Also trigger the dance immediately on page load
-startDancing();
+// Run the dance every 2 seconds
+setInterval(() => {
+    danceWelcome();
+    danceMyWorld();
+}, 2000);
+
+// Initial trigger
+danceWelcome();
+danceMyWorld();
     </script>
     </body>
 </html>

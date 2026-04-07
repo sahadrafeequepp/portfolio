@@ -1,104 +1,38 @@
 :root {
-  --bg-color: #A1D6E2;
-  --accent-color: #ED7D27;
-  --text-color: #000000;
+  background-color: #000000;
+  color: #ED7D27;
+  
 }
 
-body {
-  /* Fades from Sky Blue at the top to Antique Cream at the bottom */
-  background: linear-gradient(180deg, #A1D6E2 0%, #FFFDF0 100%);
-  background-attachment: fixed; /* Keeps the gradient still while you scroll */
-  min-height: 100vh;
-  margin: 0;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content in the header */
+    padding-left: 5%;       /* Pushes everything away from the absolute left edge */
+    min-height: 100vh;   
 }
-
-   
-/* Apply to the main title */
+.title, .title1 {
+    font-family: 'Saira Stencil One', sans-serif;
+    text-align: left;
+    width: fit-content;
+    text-shadow: 5px 5px 0px rgba(72, 6, 6, 0.539);
+    
+    /* THE FIX: Remove default spacing */
+    margin: 0; 
+    line-height: 1; /* Keeps the spacing tight and predictable */
+}
 .title {
-    font-family: 'Rubik Storm', system-ui;
-    font-size: 3rem; /* Makes it big and dramatic like an anime title */
-    color: #0ea356;  /* Use your Ghibli brown here */
+    color: #7b8f8f;
+    font-size: 50px;
+    /* Optional: Small gap between top of page and first line */
+    margin-top: 15px; 
 }
-
-/* If you want the whole page to use it (optional) */
-body {
-    font-family: system-ui;
+.title1 {
+    color: #88f4f4e7;
+    font-size: 80px;
+    /* This pulls "MY WORLD" up even closer to "WELCOME TO" */
+    margin-top: 0px; 
 }
-.card {
-  background: rgba(255, 255, 255, 0.7); /* White with 70% transparency */
-  backdrop-filter: blur(10px); /* Blurs the background colors behind the box */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
-
-.resume-wrapper {
-    background-color: #b5bacb;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 50px; /* Very rounded edges like the image */
-    box-shadow: 15px 15px 0px rgba(0,0,0,0.05); /* Soft shadow */
-}
-.card {
-    padding: 25px;
-    color: rgb(16, 9, 9);
-  }
-/* 1. The Container that holds all project cards */
-.projects-gallery {
-    display: flex;         /* Puts cards in a row */
-    gap: 20px;     
-    justify-content: center; /* THE DISTANCE: Adjust this to 10px, 20px, etc. */
-}
-
-/* 2. Making the Individual Card Smaller */
-.project-mini {
-    width: 200px;          /* Small fixed width */
-    min-height: 200px;     /* Minimum height */
-    padding: 15px;
-    text-align: center;
-    
-    /* Ghibli/Sticker Style */
-    background: #b19cd9;
-    border: 4px solid white;
-    border-radius: 20px;
-    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-    
-    transition: transform 0.3s ease;
-}
-
-/* 3. Text inside the small cards */
-.project-mini h3 {
-    font-family: 'Rubik Storm', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.project-mini p {
-    font-size: 0.8rem;
-    opacity: 0.9;
-}
-
-/* 4. Hover effect to make it pop */
-.project-mini:hover {
-    transform: scale(1.05) translateY(-5px);
-    background-color: #f8c8dc; /* Changes to pink on hover */
-}
-
-.profile-photo img {
-    width: 300px;
-    height: 300px;
-    filter: drop-shadow(2px 2px 0px white) 
-            drop-shadow(-2px -2px 0px white)
-            drop-shadow(2px -2px 0px white)
-            drop-shadow(-2px 2px 0px white);
-    transform: rotate(-3deg);
-}
-.profile-photo:hover img {
-    transform: rotate(-3deg) scale(1.05);
-    transition: transform 0.3s ease;
-}
-/* This is the parent container that holds the photo and the project card */
 .hero-layout {
     display: flex;
     flex-direction: row; /* Puts photo on right, card on left */
@@ -108,199 +42,89 @@ body {
     margin: 40px auto;
     width: 90%;
 }
-/* This forces the cards inside to sit side-by-side */
-.projects-gallery {
-    display: flex;
-    flex-direction: row;      /* CHANGED from column to row */
-    gap: 20px;                /* Space between the two cards */
-    justify-content: center;  /* Keeps them centered */
-    align-items: flex-start;  /* Aligns them at the top */
-}
-/* Reset these to stop them from forcing their own alignment */
-.profile-photo {
-    display: block; 
-    margin: 0;
-
-}
-
-
-
-/* Optional: Make the project card a bit wider if it looks too skinny */
-.project-mini {
-    width: 200px; 
-    min-height: 200px;
-}
-.profile-photo {
-    position: relative; /* This is the anchor for the bubble */
-    display: inline-block;
-    cursor: pointer;
-}
-
-.hover-bubble {
-    position: absolute;
-    top: -40px;            /* Move it higher or lower above your head */
-    left: 50%;
-    transform: translateX(-50%) scale(0); /* Start at size 0 */
-    
-    background-color: white;
-    color: #050505;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 3px solid #A1D6E2;
-   
-    
-    /* Animation settings */
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28); /* Bouncy effect */
-    z-index: 999;          /* Ensures it's always on top */
-    white-space: nowrap;   /* Stops text from wrapping */
-}
-
-/* THE TRIGGER: When you hover the PHOTO, change the BUBBLE */
-.profile-photo:hover .hover-bubble {
-    opacity: 1;
-    transform: translateX(-50%) scale(1); /* Pop up to full size */
-}
-body {
-    background: linear-gradient(-45deg, #A1D6E2, #FFFDF0, #b19cd9, #f8c8dc);
-    background-size: 400% 400%;
-    animation: gradientBG 8s ease infinite;
-    min-height: 100vh;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-/* This pushes the start of the scrollable content below the screen */
-.scroll-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50vh; /* This ensures the first card is exactly one screen-height down */
-    padding-bottom: 50px;
-    margin-bottom: 20vh;
-}
-
-/* THE HIDDEN STATE */
-.reveal.card {
-    position: sticky;     /* The Magic Rule */
-    top: 50px;            /* Where it "sticks" at the top */
-    
-    width: 85%;
-    max-width: 900px;
-    height: 80vh;    /* Tall cards look best for stacking */
-    overflow-y: hidden; /* Allows internal scrolling if content is too tall */
-    margin-bottom: 600px; /* This creates the "scroll space" between cards */
-    
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
-    border-radius: 40px;
-    border: 4px solid #b19cd9;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.1); /* Shadow helps the "overlap" look real */
-    
-    transition: transform 0.4s ease;
-}
-/* INCREMENTAL STICKY POSITIONING */
-.reveal.card:nth-child(1) { 
-    top: 30px; 
-    z-index: 1; 
-    border: 4px solid #000000; 
-}
-.reveal.card:nth-child(2) { 
-    top: 80px; /* 40px lower than card 1 */
-    z-index: 2; 
-    border: 4px solid #000000; 
-}
-.reveal.card:nth-child(3) { 
-    top: 130px; /* 40px lower than card 2 */
-    z-index: 3; 
-    border: 4px solid #000000; 
-}
-.reveal.card:nth-child(4) { 
-    top: 180px; /* 40px lower than card 3 */
-    z-index: 4; 
-    border: 4px solid #000000; 
-}
-
-/* THE VISIBLE STATE (Triggered by JavaScript) */
-
-.reveal.card {
-    /* ... your other styles ... */
-    margin-bottom: 20px; /* Essential: creates the distance between cards */
-    box-shadow: 0 -10px 20px rgba(0,0,0,0.1); /* Shadow on the top edge */
-}
-
-
-.title span {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    /* This allows the letters to have space to move */
-    padding: 0 2px; 
-}
-
-/* The Dance Animation */
-@keyframes letterDance {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-5deg); }
-    50% { transform: translateY(0) rotate(5deg); }
-    75% { transform: translateY(-5px) rotate(-3deg); }
-}
-
-.title span.dancing {
-    animation: letterDance 0.6s ease-in-out;
-    color: var(--accent-color); /* Optional: change color while dancing */
-}
 
 /* Hover effect for a little extra "tinker" feel */
 .title span:hover {
-    color: #f8c8dc;
+    color: #88f4f4e7;
     transform: scale(1.2) translateY(-5px);
 }
-.card.software-card {
-    margin-bottom: 50px; /* Adjust this value (e.g., 30px to 100px) for the desired gap */
+
+/* Hover effect for a little extra "tinker" feel */
+.title1 span:hover {
+    color: #7b8f8f;
+    transform: scale(1.2) translateY(-5px);
 }
 
-/* --- REUSABLE FLEXBOX LAYOUT FOR ALL CONTENT SECTIONS --- */
-.project-content {
-    display: flex; /* Creates the row layout */
-    flex: 1; /* Allows the content to grow and fill the card */
-    gap: 30px; /* Gap between text and image */
-    align-items: flex-start; /* Aligns text and image to the top */
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.paragraph {
+    text-align: left;
+    width: fit-content;
+    color: #7b8f8f;
+    font-size: 20px;
+    margin-left: 5%;
+
+}
+.divider {
+    border: 1px solid #7b8f8f;
+    width: 90%;
+    margin: 10px auto;
+    margin-top: -150px;
 }
 
-/* Ensure consistent text styling */
-.project-text {
-    flex: 1; /* Description takes available space */
-    font-size: 0.95rem; /* Slightly smaller text helps fit more */
+
+.carousel-container {
+  margin-top: 50px;
+  perspective: 1000px; /* Gives depth to the 3D effect */
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
 }
 
-.project-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0; /* Reset margins for flex alignment */
+.carousel {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: rotateCarousel 20s linear infinite;
 }
 
-/* Ensure consistent image container styling */
-.project-image-container {
-    flex: 0 0 50%; /* Image container is exactly 50% width */
-    max-width: 500px; /* Optional: prevents the image from getting *too* large */
-    text-align: right;
+/* Pause the rotation when you hover to click a link */
+.carousel:hover {
+  animation-play-state: paused;
 }
 
-/* Standardize image size and style for both images */
-.project-image {
-    max-width: 100%; /* Resize to fit the container */
-    max-height: 100%; /* Ensures it doesn't exceed the container */
-    height: auto;
-    width: auto;
-    border: 3px solid #000;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-    image-rendering: pixelated; /* Optional: keeps your Ghibli/pixel look sharp */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(12, 13, 13);
+  border: 1px solid #88f4f4e7;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* This formula places them in a circle */
+  transform: rotateY(calc(var(--i) * 51.42deg)) translateZ(250px);
 }
 
+.card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #098da4;
+  font-family: sans-serif;
+}
+
+/* The Spinning Animation */
+@keyframes rotateCarousel {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
