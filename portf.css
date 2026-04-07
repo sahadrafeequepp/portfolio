@@ -109,7 +109,7 @@
   align-items: center;
   justify-content: center;
   /* This formula places them in a circle */
-  transform: rotateY(calc(var(--i) * 51.42deg)) translateZ(250px);
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
 }
 
 .card img {
