@@ -119,7 +119,7 @@
 
 .card h3 {
   font-size: 14px;
-  color: #098da4;
+  color: #ffffff;
   font-family: sans-serif;
 }
 
@@ -204,9 +204,40 @@ html {
 }
 .description {
     font-family: 'Saira Stencil One', sans-serif;
-    color: #e7e6edc2;
+    color: #b3b3b3c2;
     font-size: 20px;
     position: relative;
     left: 440px;
     bottom: 200px;    
+}
+.clg {
+    font-family: "Orbitron", sans-serif;
+    color: #5deae7c2;
+    font-size: 15px;
+    position: relative;
+    left: 665px;
+    bottom: 220px; 
+    border: 1px solid #62e1dfc2;
+    border-radius: 8px;
+    max-width: fit-content;
+}
+.box {
+    border: 1px solid #ffffff;   /* Visible border */
+    padding: 20px;            /* Space inside the box */
+    margin: 20px auto;        /* Centers the box on the page */
+    max-width: 600px;         /* Prevents it from getting too wide */
+    border-radius: 8px;       /* Rounds the corners */
+    color: white;
+}
+.navigation {
+    display: flex;
+    gap: 20px;              /* Space between links */
+}
+.navigation h4 {
+    color: #ffffff;
+    font-family: 'Saira Stencil One', sans-serif;
+    font-size: 14px;
+}
+a {
+    text-decoration: none; /* Removes the underline from links */
 }
