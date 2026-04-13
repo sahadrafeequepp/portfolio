@@ -1,6 +1,5 @@
 :root {
   background-color: #000000;
-  color: #ED7D27;
   
 }
 
@@ -22,13 +21,13 @@
     line-height: 1; /* Keeps the spacing tight and predictable */
 }
 .title {
-    color: #7b8f8f;
+    color: #588080;
     font-size: 50px;
     /* Optional: Small gap between top of page and first line */
     margin-top: 15px; 
 }
 .title1 {
-    color: #88f4f4e7;
+    color: #ffffff;
     font-size: 80px;
     /* This pulls "MY WORLD" up even closer to "WELCOME TO" */
     margin-top: 0px; 
@@ -45,13 +44,13 @@
 
 /* Hover effect for a little extra "tinker" feel */
 .title span:hover {
-    color: #88f4f4e7;
+    color: #ffffff;
     transform: scale(1.2) translateY(-5px);
 }
 
 /* Hover effect for a little extra "tinker" feel */
 .title1 span:hover {
-    color: #7b8f8f;
+    color: #588080;
     transform: scale(1.2) translateY(-5px);
 }
 
@@ -185,14 +184,14 @@ html {
     border: 3px solid #000000;
     position: relative;
     left: 20px;
-    top: 50px;
+    top: 100px;
 }
 .divider1 {
     border: 1px solid #425c5c;
     width: 75%;
     position: relative;
     left: 125px;
-    margin-top: -265px;
+    margin-top: -215px;
 }
 .name {
     font-family: 'Saira Stencil One', sans-serif;
@@ -200,7 +199,7 @@ html {
     font-size: 40px;
     position: relative;
     left: 500px;
-    bottom: 200px;    
+    bottom: 150px;    
 }
 .description {
     font-family: 'Saira Stencil One', sans-serif;
@@ -208,7 +207,7 @@ html {
     font-size: 20px;
     position: relative;
     left: 440px;
-    bottom: 200px;    
+    bottom: 150px;    
 }
 .clg {
     font-family: "Orbitron", sans-serif;
@@ -216,28 +215,65 @@ html {
     font-size: 15px;
     position: relative;
     left: 665px;
-    bottom: 220px; 
+    bottom: 170px; 
     border: 1px solid #62e1dfc2;
     border-radius: 8px;
     max-width: fit-content;
 }
 .box {
-    border: 1px solid #ffffff;   /* Visible border */
-    padding: 20px;            /* Space inside the box */
+    border: 1px solid #5c5656;   /* Visible border */
+    padding: 10px;            /* Space inside the box */
     margin: 20px auto;        /* Centers the box on the page */
-    max-width: 600px;         /* Prevents it from getting too wide */
-    border-radius: 8px;       /* Rounds the corners */
+    max-width: 400px;         /* Prevents it from getting too wide */
+    border-radius: 28px;       /* Rounds the corners */
     color: white;
+    position: relative;
+    left: 50px;
+    
 }
 .navigation {
     display: flex;
-    gap: 20px;              /* Space between links */
+    gap: 5px;              /* Space between links */
 }
 .navigation h4 {
     color: #ffffff;
     font-family: 'Saira Stencil One', sans-serif;
     font-size: 14px;
+    padding-left: 20px;
 }
 a {
     text-decoration: none; /* Removes the underline from links */
+}
+.box1 {
+    border: 1px solid #5c5656;   /* Visible border */
+    padding: 5px;            /* Space inside the box */
+    margin: 20px auto;        /* Centers the box on the page */
+    max-width: 400px;         /* Prevents it from getting too wide */
+    border-radius: 28px;       /* Rounds the corners */
+    color: white;
+    position: relative;
+    bottom: 250px;
+    left: center;
+}
+
+
+.pjt {
+    font-family: 'Saira Stencil One', sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+    position: relative;
+    left: 500px;
+    top: 50px;
+    text-shadow: 4px 4px 4px rgb(14, 137, 139);
+}
+.divider2 {
+    border: 1px solid #425c5c;
+    width: 50%;
+    position: relative;
+    top: 50px;
+}
+
+
+ {
+    outline: 1px solid red !important;
 }
